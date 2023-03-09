@@ -24,7 +24,7 @@ int main() {
         std::uniform_int_distribution<unsigned> dstr(0, m);
         auto begin = std::chrono::steady_clock::now();
         for (int j = 0; j < s_count; j++){
-            binar_search(a, -1, m); 
+            search(a, -1, m); 
         }
         auto end = std::chrono::steady_clock::now();
         auto time_s = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
