@@ -7,14 +7,15 @@ using std::cout;
 using std::cin;
 using std::endl;
 
-void find_two(int* array, int s, int a) {
+int find_two(int* array, int s, int a) {
     for (int i = 0; i < a; i++) {
         for (int j = i+1; j < a; j++) {
             if (array[i]+array[j] == s) {
-                return;
+                return i, j;
             }
         }
     }
+    return 0, 0;
 } 
 
 int main(){
