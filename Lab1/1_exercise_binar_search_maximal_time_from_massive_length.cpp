@@ -3,14 +3,14 @@
 #include <fstream>
 #include <random>
 
-void binar_search(int* array, int k, int array_size) {
+int binar_search(int* array, int k, int array_size) {
     int l = 0;
     int r = array_size - 1;
     int m = 0;
     while (l < r) {
         m = (l + r)/2;
         if (k == array[m]) {
-            return;
+            return m;
         }
         if (k < array[m]) {
             r = m - 1;
@@ -18,6 +18,7 @@ void binar_search(int* array, int k, int array_size) {
             l = m + 1;
         }
     }
+    return -1;
 } 
 
 
