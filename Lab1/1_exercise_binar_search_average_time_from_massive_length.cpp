@@ -10,7 +10,7 @@ void binar_search(int* array, int k, int a) {
     while (l < r) {
         m = (l + r)/2;
         if (k == array[m]) {
-            return;
+            return k;
         }
         if (k < array[m]) {
             r = m - 1;
@@ -18,6 +18,7 @@ void binar_search(int* array, int k, int a) {
             l = m + 1;
         }
     }
+    return -1;
 } 
 
 
