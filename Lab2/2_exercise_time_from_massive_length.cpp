@@ -39,8 +39,9 @@ void step_sort(int array[], unsigned const begin_index, unsigned const end_index
 }
 
 void sort(int array[], unsigned const array_size) {
-    step_sort(array, 0, array_size, 2);
-    step_sort(array, 0, array_size, 1);
+    for (int i = array_size; i > 0; i = i/2) {
+        step_sort(array, 0, array_size, i);
+    }
     return;
 }
 int main(){
