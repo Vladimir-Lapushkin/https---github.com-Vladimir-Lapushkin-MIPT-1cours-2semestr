@@ -3,7 +3,7 @@
 #include <fstream>
 #include <random>
 
-void binar_search(int* array, int k, int a) {
+int binar_search(int* array, int k, int a) {
     int l = 0;
     int r = a - 1;
     int m = 0;
