@@ -15,7 +15,7 @@ void forward_step(int array[], unsigned const begin_index, unsigned const end_in
 int main() {
     int marker = 0;
     for (int m = 3; m<7; m += 1){
-        int array[m];
+        int* array = new int[m];
         for (int i = 1; i < m+1; i++){
             array[i] = i-1;
         } 
