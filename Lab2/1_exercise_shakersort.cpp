@@ -38,7 +38,7 @@ void sort(int array[], unsigned const array_size) {
 int main() {
     int marker = 0;
     for (int m = 3; m<7; m += 1){
-        int array[m];
+        int* array = new int[m];
         for (int i = 0; i < m+1; i++){
             array[i] = m-i;
         } 
